@@ -24,6 +24,7 @@ Se pueden encontrar una serie de entradas en la carpeta `./data`. Allí encontra
 Para casos de un mejor camino de principio a fin entre en la carpeta `uno`, para el peor caso (sin mejor camino), entre en la carpeta `sin`, y para casos intermedios con camino mejor parcial, entre en la carpeta `parcial`.
 
 ## Correr normalmente
+
 Si desea correr las pruebas directamente, sin scehduler, corra el siguinte comando luego de hacer `make`. N es el numero de procesos
 ```
 $ mpirun -np N main [archivo de entrada]

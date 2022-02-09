@@ -9,7 +9,7 @@
 
 int main(int argc, char* argv[]) {
    FILE* archivo_de_matriz = NULL;
-   double comienzo, fin;
+   double comienzo, fin, duracion_local, duracion;
    int ok_local = 1, tam_un_msg;
    char uso[256];
    char* buf;
@@ -48,7 +48,8 @@ int main(int argc, char* argv[]) {
    Busqueda_branch_and_bound();
    fin = MPI_Wtime();
 
-
+   duracion_local = fin - comienzo;
+   MPI_Reduce(&duracion_local, &duracion, 1, MPI_DOUBLE, MPI_MAX, 0, universo);
    Limpiar_cola_mensages();
    MPI_Barrier(universo);
    MPI_Buffer_detach(&buf, &tam_un_msg);
@@ -56,7 +57,7 @@ int main(int argc, char* argv[]) {
    if (mi_id_proceso == 0) {
       Imprimir_camino(mejor_camino_local, "Mejor camino");
       printf("Costo = %d\n", mejor_camino_local->costo);
-      printf("Tiempo = %f seconds\n", fin-comienzo);
+      printf("Tiempo = %f seconds\n", duracion);
    }
 
    MPI_Type_free(&camino_mpi_t);

@@ -1,3 +1,4 @@
 main.dSYM
 *.o
-
+.DS_Store
+main

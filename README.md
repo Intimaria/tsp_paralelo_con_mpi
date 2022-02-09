@@ -23,7 +23,7 @@ $ bash script.sh [numero de nodos] [numero de procesos por nodo] main [archivo d
 Se pueden encontrar una serie de entradas en la carpeta `./data`. Allí encontrara tres casos de grafos, cada uno con Ns de 5, 8, 10, 12 y 15.
 Para casos de un mejor camino de principio a fin entre en la carpeta `uno`, para el peor caso (sin mejor camino), entre en la carpeta `sin`, y para casos intermedios con camino mejor parcial, entre en la carpeta `parcial`.
 
-## Correr normalmente
+## Correr normalmente
 
 Si desea correr las pruebas directamente, sin scehduler, corra el siguinte comando luego de hacer `make`. N es el numero de procesos
 ```

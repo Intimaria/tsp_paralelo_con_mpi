@@ -57,7 +57,7 @@ int main(int argc, char* argv[]) {
    if (mi_id_proceso == 0) {
       Imprimir_camino(mejor_camino_local, "Mejor camino");
       printf("Costo = %d\n", mejor_camino_local->costo);
-      printf("Tiempo = %f seconds\n", duracion);
+      printf("Tiempo = %f segundos\n", duracion);
    }
 
    MPI_Type_free(&camino_mpi_t);

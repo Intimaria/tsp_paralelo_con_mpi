@@ -105,7 +105,7 @@ camino_t Sacar_ultimo(pila_propia_t pila) {
    pila->lista[pila->tam_de_lista-1] = NULL;
    (pila->tam_de_lista)--;
    return tmp;
-}  /* Sacar_ultimo */
+}  
 
 
 int  Pila_esta_vacia(pila_propia_t pila) {

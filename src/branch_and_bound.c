@@ -42,8 +42,8 @@ void Particionar_el_arbol(pila_propia_t pila) {
    int tam_de_cola, contador_de_caminos;
    ciudad_t *lista_de_colas = NULL;
    ciudad_t *lista_de_caminos;
-   int cuantos[num_de_procesos];  /* For scatter */
-   int desplazamientos[num_de_procesos];  /* For scatter */
+   int cuantos[num_de_procesos];  
+   int desplazamientos[num_de_procesos]; 
 
    if (mi_id_proceso == 0) {
       tam_de_cola = Limite_superior_para_cola();

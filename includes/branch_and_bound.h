@@ -10,8 +10,7 @@
 costo_t* matriz_de_adyacencias;
 camino_t mejor_camino_local;
 costo_t costo_del_mejor_camino;
-MPI_Datatype camino_mpi_t;  
-
+MPI_Datatype camino_mpi_t; 
 
 #define Cant_ciudades(camino) (camino->contador)
 #define Costo_camino(camino) (camino->costo)
